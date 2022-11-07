@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rock-Paper-Scissors-TheGame</title>
+		<script>
+			let player = 0;
+      let min = 1;
+      let max = 3;      
+			let pc = Math.floor(Math.random()*(max-min+1)+min);
+			player = prompt("Elige: 1 para rock, 2 para papel, 3 para tijera");
+			if (player == 1) {
+				alert("Elegiste rock");
+				console.log("Elegiste rock");
+			} else if (player == 2) {
+				alert("Elegiste paper");
+				console.log("Elegiste paper");
+			} else if (player == 3) {
+				alert("Elegiste Scissors");
+				console.log("Elegiste Scissors");
+			} else {
+				alert("Elegiste perder");
+			}
+			if (pc == 1) {
+				alert("PC elige rock");
+				console.log("PC elige rock");
+			} else if (pc == 2) {
+				alert("PC elige paper");
+				console.log("PC elige paper");
+			} else if (pc == 3) {
+				alert("PC elige Scissors");
+				console.log("PC elige Scissors");
+			}
+			//Combat
+			if (pc == player) {
+				alert("Empate");
+			} else if ((player == 1 && pc == 3)|| (player == 2 && pc == 1) || (player == 3 && pc == 2)) {
+				alert("Ganaste");
+			} else {
+				alert("Perdiste");
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Rock Paper Scissors The Game</h1>
+	</body>
+</html>

@@ -1,8 +1,3 @@
-const rock = document.getElementById('b1');
-const paper = document.querySelector('#b2');
-const scissors = document.querySelector('div.btn#b3');
-
-
 function aleatorio(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
@@ -40,25 +35,36 @@ let player = 0;
 let pc = 0;
 let wins = 0;
 let lost = 0;
+let draws = 0;
 let pos = "";
-function playbegins(val){
+const vicLabel = document.querySelector('#vic');
+const defLabel = document.querySelector('#def');
+const drwLabel = document.querySelector('#drw');
+
+function playbegins(val) {
   //console.log(event.target)
   //while (wins < 3 && lost < 3) {
-    pc = aleatorio(1, 3);
-    //player = prompt( "Elige: 1 para rock, 2 para papel, 3 para tijera" );
-    player = val;
-    alert("PC elige " + eleccion(pc) + "y tu Elegiste" + eleccion(player));
-    pos = combat(pc, player);
-    if (pos == "Ganaste") {
-      wins++;
-    }
-    else if (pos == "Perdiste") {
-      lost++;
-    }
-    console.log(wins + "_" + lost);
-    alert("Tu: " + pos);
+  pc = aleatorio(1, 3);
+  //player = prompt( "Elige: 1 para rock, 2 para papel, 3 para tijera" );
+  player = val;
+  alert("PC elige " + eleccion(pc) + "y tu Elegiste" + eleccion(player));
+  pos = combat(pc, player);
+  if (pos == "Ganaste") {
+    wins++;
+  }
+  else if (pos == "Perdiste") {
+    lost++;
+  }
+  else if (pos == "Empate") {
+    draws++
+  }
+  console.log(wins + "_" + lost+"_"+draws);
+  alert("Tu: " + pos);
+  vicLabel.textContent = wins;
+  defLabel.textContent = lost;
+  drwLabel.textContent = draws;
   //}
-  alert("Ganaste " + wins + " veces. Perdiste " + lost + " veces.");
+  //alert("Ganaste " + wins + " veces. Perdiste " + lost + " veces.");
 }
 
 

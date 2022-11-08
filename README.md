@@ -3,7 +3,7 @@
 
   &#xa0;
 
- <a href="http://projects.jonatan008.com/RockPaperScissors/">Demo</a>
+ <a href="https://projects.jonatan008.com/RockPaperScissors/">Demo</a>
 </div>
 
 <h1 align="center">Rock Paper Scissors The Game</h1>

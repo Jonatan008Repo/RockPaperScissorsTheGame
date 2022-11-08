@@ -5,47 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Rock-Paper-Scissors-TheGame</title>
-		<script>
-			function aleatorio(min, max) {
-				return Math.floor(Math.random() * (max - min + 1) + min);
-			}
-			function eleccion(playe) {
-				let result=""
-				if (playe == 1) {
-					result="🥌";
-					console.log("Elegiste rock");
-				} else if (playe == 2) {
-					result="📃";
-					console.log("Elegiste paper");
-				} else if (playe == 3) {
-					result = "✂";
-					console.log("Elegiste Scissors");
-				} else {
-					result="Elegiste perde"
-					console.log("Error de dato");
-				}
-				return result;
-			}
-			let player = 0;
-			let pc = aleatorio(1, 3);
-			player = prompt("Elige: 1 para rock, 2 para papel, 3 para tijera");
-			alert("PC elige "+ eleccion(pc));
-			alert("Elegiste" + eleccion(player));
-
-
-			//Combat
-			if (pc == player) {
-				alert("Empate");
-			} else if (
-				(player == 1 && pc == 3) ||
-				(player == 2 && pc == 1) ||
-				(player == 3 && pc == 2)
-			) {
-				alert("Ganaste");
-			} else {
-				alert("Perdiste");
-			}
-		</script>
+		<script src="js/codigo.js"></script>
 	</head>
 	<body>
 		<h1>Rock Paper Scissors The Game</h1>
